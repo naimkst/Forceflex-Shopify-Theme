@@ -1,0 +1,50 @@
+<!-- start of about-section -->
+<section class="about-section section-padding pb-0">
+  <div class="container">
+    <div class="image-sequence-container">
+      <div class="image-sequence">
+        <div class="about-top">
+          <div class="logo wow fadeInUp" data-wow-duration="1000ms">
+            <img
+              src="{{ section.settings.about_image | image_url: width: 700  }}"
+              alt=""
+              width=""
+              height="">
+          </div>
+          <h2 class="wow fadeInUp" data-wow-duration="1200ms">{{ section.settings.title }}</h2>
+        </div>
+        <img
+          id="sequence"
+          src="{{ '02_0360.png' | asset_url }}"
+          alt="Image Sequence"
+          width=""
+          height=""
+          alt="">
+      </div>
+    </div>
+  </div>
+</section>
+<!-- end of about-section -->
+
+{% schema %}
+  {
+    "name": "About Section",
+    "settings": [
+      {
+        "type": "image_picker",
+        "id": "about_image",
+        "label": "About Image"
+      }, {
+        "type": "text",
+        "id": "title",
+        "label": "About Title",
+        "default": "AS BAMBOO."
+      }
+    ],
+    "presets": [
+      {
+        "name": "About Section"
+      }
+    ]
+  }
+{% endschema %}
