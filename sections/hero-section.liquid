@@ -1,0 +1,62 @@
+<!-- start of hero-slide-section -->
+<section class="hero-slider" style="background: url({{ section.settings.hero_background_image | image_url: width: 1920  }}) no-repeat center center;  background-size: cover;">
+  <div class="slide-inner slide-bg-image">
+    <div class="container-fluid">
+      <div class="slide-content">
+        <div data-swiper-parallax="300" class="slide-title">
+          <h2>{{ section.settings.hero_title }}</h2>
+        </div>
+        <div data-swiper-parallax="200" class="slide-title-top">
+          <p>{{ section.settings.hero_description }}</p>
+        </div>
+        <div class="clearfix"></div>
+        <div data-swiper-parallax="500" class="slide-btns">
+          <a href="{{ section.settings.hero_button_Link }}" class="theme-btn">{{ section.settings.hero_button_text }}</a>
+        </div>
+      </div>
+    </div>
+  </div>
+<!-- end slide-inner -->
+</section>
+<!-- end of hero-slide-section -->
+
+
+{% schema %}
+  {
+    "name": "Hero Section",
+    "settings": [
+      {
+        "type": "image_picker",
+        "id": "hero_background_image",
+        "label": "Background Image"
+      },
+      {
+        "type": "text",
+        "id": "hero_title",
+        "label": "Hero Section Title",
+        "default": "UNBREAKABLE GLASSES THAT LET YOU DO GREAT THINGS."
+      },
+      {
+        "type": "text",
+        "id": "hero_description",
+        "label": "Hero Description",
+        "default": "Flexible sunglasses that self-adjust. Style and comfort at it's peak."
+      },
+      {
+        "type": "text",
+        "id": "hero_button_text",
+        "label": "Hero Button Text",
+        "default": "Shop by Lifestyle"
+      }, {
+        "type": "url",
+        "id": "hero_button_Link",
+        "label": "Hero Button Link"
+      }
+    ],
+    "presets": [
+      {
+        "name": "Hero Section"
+      }
+    ]
+  }
+{% endschema %}
